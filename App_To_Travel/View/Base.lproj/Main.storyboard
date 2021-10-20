@@ -32,7 +32,7 @@
         <scene sceneID="MPO-X6-9IT">
             <objects>
                 <navigationController id="yw1-G4-SuB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Translation" image="Translation" id="tfQ-Px-4an"/>
+                    <tabBarItem key="tabBarItem" title="Translation" image="Translation" selectedImage="icons8-requires_interpreter_filled-1" id="tfQ-Px-4an"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cSc-vy-YXJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -373,7 +373,7 @@
         <scene sceneID="kLy-as-wCl">
             <objects>
                 <navigationController id="oKR-xo-sL2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Weather" image="Weather" id="YMc-Us-k9Z"/>
+                    <tabBarItem key="tabBarItem" title="Weather" image="Weather" selectedImage="icons8-windy_weather-1" id="YMc-Us-k9Z"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mlK-zV-5Gg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -391,7 +391,7 @@
         <scene sceneID="a2O-CT-2wQ">
             <objects>
                 <navigationController id="hLO-4a-DSM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Exchange Rate" image="Exchange" id="dnB-0U-Wfc"/>
+                    <tabBarItem key="tabBarItem" title="Exchange Rate" image="Exchange" selectedImage="icons8-currency_exchange-1" id="dnB-0U-Wfc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vwv-jM-1sn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -451,9 +451,6 @@
                                         <color key="textColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="continue"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="zo4-Q8-mCC" id="Lx6-I6-BiH"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -463,23 +460,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="1aV-Wy-lJF" userLabel="Currency Stack View">
                                 <rect key="frame" x="10" y="109" width="300" height="216"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Choose the currency" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozs-EB-1cy">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="216"/>
-                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="16"/>
-                                        <color key="textColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bJu-g8-OO9">
-                                        <rect key="frame" x="2" y="0.0" width="298" height="216"/>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJu-g8-OO9">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="216"/>
                                         <connections>
                                             <outlet property="dataSource" destination="zo4-Q8-mCC" id="xeu-df-adO"/>
                                             <outlet property="delegate" destination="zo4-Q8-mCC" id="oIH-De-YnD"/>
                                         </connections>
                                     </pickerView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="bJu-g8-OO9" firstAttribute="height" secondItem="Ozs-EB-1cy" secondAttribute="height" id="dQK-kw-1fk"/>
-                                </constraints>
                             </stackView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="c7t-d3-IQl">
                                 <rect key="frame" x="141.5" y="457" width="37" height="37"/>
@@ -556,5 +544,8 @@
         <image name="Exchange" width="25" height="25"/>
         <image name="Translation" width="25" height="25"/>
         <image name="Weather" width="25" height="25"/>
+        <image name="icons8-currency_exchange-1" width="50" height="50"/>
+        <image name="icons8-requires_interpreter_filled-1" width="50" height="50"/>
+        <image name="icons8-windy_weather-1" width="50" height="50"/>
     </resources>
 </document>

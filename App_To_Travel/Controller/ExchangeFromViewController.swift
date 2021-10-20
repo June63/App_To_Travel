@@ -14,7 +14,6 @@ class ExchangeFormViewController: UIViewController {
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var currencyPickerView: UIPickerView!
     @IBOutlet weak var convertedAmountLabel: UILabel!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var convertButton: UIButton!
 
 }
