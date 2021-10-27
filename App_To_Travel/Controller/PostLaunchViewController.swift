@@ -14,7 +14,7 @@ class PostLaunchViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-
+    
     // Outlets
     @IBOutlet weak var iconBaluchon: UIImageView!
 
@@ -41,3 +41,5 @@ class PostLaunchViewController: UIViewController {
         }
     }
 }
+
+
