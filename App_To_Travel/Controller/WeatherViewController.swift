@@ -2,9 +2,10 @@
 //  WeatherViewController.swift
 //  App_To_Travel
 //
-//  Created by Léa Kieffer on 13/10/2021.
+//  Created by Léa Kieffer on 27/10/2021.
 //
 
+import Foundation
 import UIKit
 
 class WeatherViewController: UIViewController {
@@ -23,7 +24,7 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var selectedCityWeatherIcon: UIImageView!
     @IBOutlet weak var citiesListButton: UIStackView!
     @IBOutlet weak var selectedCityLabel: UILabel!
-    @IBOutlet weak var compareWeatherButton: DesignableButton!
+    @IBOutlet weak var compareWeatherButton: UIButton!
     @IBOutlet weak var loader: UIActivityIndicatorView!
 
     override func viewDidLoad() {
@@ -144,4 +145,3 @@ extension WeatherViewController {
         self.present(alertVC, animated: true)
     }
 }
-

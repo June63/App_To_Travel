@@ -2,9 +2,10 @@
 //  TranslatorViewController.swift
 //  App_To_Travel
 //
-//  Created by Léa Kieffer on 13/10/2021.
+//  Created by Léa Kieffer on 27/10/2021.
 //
 
+import Foundation
 import UIKit
 
 class TranslatorViewController: UIViewController {
@@ -17,7 +18,7 @@ class TranslatorViewController: UIViewController {
     // MARK: Outlets
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var headerView: UIView!
-    @IBOutlet weak var translatorButton: DesignableButton!
+    @IBOutlet weak var translatorButton: UIButton!
     @IBOutlet weak var topView: UIStackView!
     @IBOutlet weak var targetTextView: UITextView!
     @IBOutlet weak var separatorView: UIImageView!
@@ -158,8 +159,6 @@ extension TranslatorViewController: UITextViewDelegate {
     private func resetUI() {
         UIView.animate(withDuration: 0.3) {
             self.scrollView.contentOffset = CGPoint(x: 0, y: 0)
-            self.translatorButton.transform = .identity
-            self.loader.transform = .identity
             self.headerView.alpha = 1
             self.topView.alpha = 1
             self.separatorView.alpha = 1
@@ -187,4 +186,3 @@ extension TranslatorViewController {
         self.present(alertVC, animated: true)
     }
 }
-
