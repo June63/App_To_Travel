@@ -53,8 +53,7 @@ class TranslateService {
         // Set task
         task = translateSession.dataTask(with: request) { (data, response, error) in
 
-            // Return in the main queue
-            DispatchQueue.main.async {
+          
                 // Check for data and no error
                 guard let data = data, error == nil else {
                     callback(false, nil)
@@ -85,7 +84,7 @@ class TranslateService {
                 // Get the translation quote
                 callback(true, stringToDecode)
             }
-        }
+
 
         // Resume task
         task?.resume()

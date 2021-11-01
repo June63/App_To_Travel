@@ -50,8 +50,6 @@ class CurrencyService {
         // Set task
         task = currencySession.dataTask(with: currencyURL) { (data, response, error) in
 
-            // Return in the main queue
-            DispatchQueue.main.async {
                 // Check for data and no error
                 guard let data = data, error == nil else {
                     callback(false)
@@ -82,7 +80,6 @@ class CurrencyService {
                 Currency.shared.rates = responseJSON.rates
                 callback(true)
             }
-        }
 
         // Resumes the task
         task?.resume()

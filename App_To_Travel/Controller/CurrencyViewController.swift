@@ -79,10 +79,13 @@ class CurrencyViewController: UIViewController {
                 self.loader.isHidden = true
 
                 if success {
-                    //
-                    self.convertingCurrency()
+                    DispatchQueue.main.async {
+                        self.convertingCurrency()
+                    }
                 } else {
-                    self.alertCurrencyFail()
+                    DispatchQueue.main.async {
+                        self.alertCurrencyFail()
+                    }
                 }
             }
             return

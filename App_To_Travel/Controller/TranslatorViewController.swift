@@ -60,9 +60,15 @@ class TranslatorViewController: UIViewController {
             self.translatorButton.isHidden = false
 
             if success {
-                self.targetTextView.text = self.decodeString(stringToDecode!)
+                DispatchQueue.main.async {
+                    self.targetTextView.text = self.decodeString(stringToDecode!)
+                }
+                
             } else {
-                self.alertTranslationFail()
+                DispatchQueue.main.async {
+                    self.alertTranslationFail()
+                }
+                
             }
         }
     }
