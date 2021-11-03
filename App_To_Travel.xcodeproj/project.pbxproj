@@ -42,6 +42,9 @@
 		49398FB7270D92FB00DD6CE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		496D155927200556007A6461 /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
 		49A32AAC2729338B00E076FB /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		49BD93152732942100875EA6 /* CurrencyServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyServiceTestCase.swift; sourceTree = "<group>"; };
+		49BD93162732944000875EA6 /* TranslateServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateServiceTestCase.swift; sourceTree = "<group>"; };
+		49BD93172732946100875EA6 /* WeatherServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceTestCase.swift; sourceTree = "<group>"; };
 		49C9E26827294B93001F35F7 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		49D1526627294CE8001D24EF /* CurrencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyService.swift; sourceTree = "<group>"; };
 		49D1526927294DD1001D24EF /* SettingSerivce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSerivce.swift; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				49398FA8270D92F800DD6CE1 /* App_To_Travel */,
+				49BD9314273293F400875EA6 /* App_To_Travel_Test */,
 				49398FA7270D92F800DD6CE1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -142,6 +146,16 @@
 				49398FA9270D92F800DD6CE1 /* AppDelegate.swift */,
 			);
 			path = "Suporting Files";
+			sourceTree = "<group>";
+		};
+		49BD9314273293F400875EA6 /* App_To_Travel_Test */ = {
+			isa = PBXGroup;
+			children = (
+				49BD93152732942100875EA6 /* CurrencyServiceTestCase.swift */,
+				49BD93162732944000875EA6 /* TranslateServiceTestCase.swift */,
+				49BD93172732946100875EA6 /* WeatherServiceTestCase.swift */,
+			);
+			path = App_To_Travel_Test;
 			sourceTree = "<group>";
 		};
 		49D1526827294D0C001D24EF /* Currency */ = {
