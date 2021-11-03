@@ -16,7 +16,7 @@
 		496D155A27200556007A6461 /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496D155927200556007A6461 /* CurrencyViewController.swift */; };
 		49A32AAD2729338B00E076FB /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A32AAC2729338B00E076FB /* Currency.swift */; };
 		49BD931A2732985C00875EA6 /* citylist.json in Resources */ = {isa = PBXBuildFile; fileRef = 49BD93192732985C00875EA6 /* citylist.json */; };
-		49C9E26927294B93001F35F7 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C9E26827294B93001F35F7 /* APIKeys.swift */; };
+		49BD93242732A11F00875EA6 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD93232732A11F00875EA6 /* APIKeys.swift */; };
 		49D1526727294CE8001D24EF /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1526627294CE8001D24EF /* CurrencyService.swift */; };
 		49D1526A27294DD1001D24EF /* SettingSerivce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1526927294DD1001D24EF /* SettingSerivce.swift */; };
 		49D1526D27294E2F001D24EF /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1526C27294E2F001D24EF /* Protocol.swift */; };
@@ -47,7 +47,7 @@
 		49BD93162732944000875EA6 /* TranslateServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateServiceTestCase.swift; sourceTree = "<group>"; };
 		49BD93172732946100875EA6 /* WeatherServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceTestCase.swift; sourceTree = "<group>"; };
 		49BD93192732985C00875EA6 /* citylist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = citylist.json; sourceTree = "<group>"; };
-		49C9E26827294B93001F35F7 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		49BD93232732A11F00875EA6 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		49D1526627294CE8001D24EF /* CurrencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyService.swift; sourceTree = "<group>"; };
 		49D1526927294DD1001D24EF /* SettingSerivce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSerivce.swift; sourceTree = "<group>"; };
 		49D1526C27294E2F001D24EF /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
@@ -110,10 +110,10 @@
 				49D15280272971D1001D24EF /* Translate */,
 				49D1526B27294E10001D24EF /* Weather */,
 				49D1526827294D0C001D24EF /* Currency */,
-				49C9E26827294B93001F35F7 /* APIKeys.swift */,
 				49D1526927294DD1001D24EF /* SettingSerivce.swift */,
 				49D1526C27294E2F001D24EF /* Protocol.swift */,
 				49D1527A27297008001D24EF /* City.swift */,
+				49BD93232732A11F00875EA6 /* APIKeys.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,8 +276,8 @@
 				49A32AAD2729338B00E076FB /* Currency.swift in Sources */,
 				49D1527D27297069001D24EF /* Weather.swift in Sources */,
 				4927D8CD27297E4100A275E8 /* PostLaunchViewController.swift in Sources */,
-				49C9E26927294B93001F35F7 /* APIKeys.swift in Sources */,
 				49D1526D27294E2F001D24EF /* Protocol.swift in Sources */,
+				49BD93242732A11F00875EA6 /* APIKeys.swift in Sources */,
 				49D1527B27297008001D24EF /* City.swift in Sources */,
 				49398FAA270D92F800DD6CE1 /* AppDelegate.swift in Sources */,
 				49D1526727294CE8001D24EF /* CurrencyService.swift in Sources */,
