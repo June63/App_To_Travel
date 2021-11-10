@@ -5,7 +5,6 @@
 //  Created by Léa Kieffer on 27/10/2021.
 //
 
-import Foundation
 import UIKit
 
 class CurrenciesListViewController: UIViewController {
@@ -132,4 +131,3 @@ extension CurrenciesListViewController {
         self.present(alertVC, animated: true)
     }
 }
-

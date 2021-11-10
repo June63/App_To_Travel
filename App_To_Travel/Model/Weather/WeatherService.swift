@@ -78,8 +78,6 @@ class WeatherService {
         // Set task
         task = weatherSession.dataTask(with: selectedCityURL) { (data, response, error) in
 
-            // Return in the main queue
-            DispatchQueue.main.async {
                 // Check for data and no error
                 guard let data = data, error == nil else {
                     callback(false, nil)
@@ -124,7 +122,6 @@ class WeatherService {
                     callback(true, weatherDetails)
                 })
             }
-        }
 
         // Resume task
         task?.resume()
@@ -138,7 +135,7 @@ class WeatherService {
 
         // Set task
         task? = weatherNYSession.dataTask(with: newYorkCityURL) { (data, response, error) in
-            
+
                 // Check for data and no error
                 guard let data = data, error == nil else {
                     completionHandler(nil)
@@ -171,4 +168,3 @@ class WeatherService {
         task?.resume()
     }
 }
-

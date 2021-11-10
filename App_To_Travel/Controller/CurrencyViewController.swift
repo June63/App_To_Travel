@@ -220,6 +220,7 @@ extension CurrencyViewController: UITextFieldDelegate {
         UIView.animate(withDuration: 0.3) {
             self.scrollView.contentOffset = CGPoint(x: 0, y: 0)
             self.headerView.alpha = 1
+            self.converterButton.transform = .identity
             self.loader.transform = .identity
         }
 

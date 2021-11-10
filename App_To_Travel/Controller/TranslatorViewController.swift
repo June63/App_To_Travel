@@ -5,7 +5,6 @@
 //  Created by Léa Kieffer on 27/10/2021.
 //
 
-import Foundation
 import UIKit
 
 class TranslatorViewController: UIViewController {
@@ -55,20 +54,17 @@ class TranslatorViewController: UIViewController {
 
         // API call
         TranslateService.shared.getTranslation { (success, stringToDecode) in
-            // Hide loader and show button
-            self.loader.isHidden = true
-            self.translatorButton.isHidden = false
 
             if success {
                 DispatchQueue.main.async {
                     self.targetTextView.text = self.decodeString(stringToDecode!)
                 }
-                
+                            
             } else {
                 DispatchQueue.main.async {
                     self.alertTranslationFail()
                 }
-                
+                            
             }
         }
     }
@@ -165,6 +161,8 @@ extension TranslatorViewController: UITextViewDelegate {
     private func resetUI() {
         UIView.animate(withDuration: 0.3) {
             self.scrollView.contentOffset = CGPoint(x: 0, y: 0)
+            self.translatorButton.transform = .identity
+            self.loader.transform = .identity
             self.headerView.alpha = 1
             self.topView.alpha = 1
             self.separatorView.alpha = 1
