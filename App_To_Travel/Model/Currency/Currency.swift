@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 // Struct for matching Json response
 class Currency: Codable {
@@ -17,3 +18,5 @@ class Currency: Codable {
     var base, date: String?
     var rates: [String: Double]?
 }
+
+
