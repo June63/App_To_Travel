@@ -28,4 +28,3 @@ struct Translate {
     var quote = ""
     var translatedQuote = ""
 }
-

@@ -1,8 +1,8 @@
 //
 //  TranslateServiceTestCase.swift
-//  App_To_Travel
+//  App_To_TravelTests
 //
-//  Created by Léa Kieffer on 03/11/2021.
+//  Created by Léa Kieffer on 10/11/2021.
 //
 
 @testable import App_To_Travel
@@ -107,3 +107,4 @@ class TranslateServiceTestCase: XCTestCase {
         wait(for: [expectation], timeout: 0.01)
     }
 }
+
