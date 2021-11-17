@@ -34,8 +34,8 @@ class PostLaunchViewController: UIViewController {
                 guard succes else { return }
 
                 let sb = self.storyboard?.instantiateViewController(withIdentifier: "TabBar")
-                var vc = sb as! CustomTabBarViewController
-                //var vc = modalPresentationStyle
+                let vc = sb as! CustomTabBarViewController
+                vc.modalPresentationStyle = .fullScreen
 
                 self.present(vc, animated: false)
             }

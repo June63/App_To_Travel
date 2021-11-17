@@ -5,16 +5,15 @@
 //  Created by Léa Kieffer on 10/11/2021.
 //
 
-@testable import App_To_Travel
 import XCTest
+@testable import App_To_Travel
 
 class TranslateServiceTestCase: XCTestCase {
 
     func testGetTranslateShouldPostFailedCallbackIfError() {
         // Given
-        let translateService = TranslateService(
-            translateSession: URLSessionFake(data: nil, response: nil, error: FakeResponseData.error))
-
+        let session = FakeURLSession(data: FakeResponseData.correctTranslateData, response: FakeResponseData.responseKO, error: nil)
+        let translateService = TranslateService(translateSession: session)
         // When
         let expectation = XCTestExpectation(description: "Waiting for queue change")
         translateService.getTranslation { (succes, stringToDecode) in
@@ -29,9 +28,8 @@ class TranslateServiceTestCase: XCTestCase {
 
     func testGetTranslateShouldPostFailedCallbackIfNoData() {
         // Given
-        let translateService = TranslateService(
-            translateSession: URLSessionFake(data: nil, response: nil, error: nil))
-
+        let session = FakeURLSession(data: FakeResponseData.correctTranslateData, response: FakeResponseData.responseKO, error: nil)
+        let translateService = TranslateService(translateSession: session)
         // When
         let expectation = XCTestExpectation(description: "Waiting for queue change")
         translateService.getTranslation { (success, stringToDecode) in
@@ -46,12 +44,8 @@ class TranslateServiceTestCase: XCTestCase {
 
     func testGetTranslateShouldPostFailedCallbackIfIncorrectResponse() {
         // Given
-        let translateService = TranslateService(
-            translateSession: URLSessionFake(
-                data: FakeResponseData.translateCorrectData,
-                response: FakeResponseData.reponseKO,
-                error: nil))
-
+        let session = FakeURLSession(data: FakeResponseData.correctTranslateData, response: FakeResponseData.responseKO, error: nil)
+        let translateService = TranslateService(translateSession: session)
         // When
         let expectation = XCTestExpectation(description: "Waiting for queue change")
         translateService.getTranslation { (success, stringToDecode) in
@@ -66,12 +60,8 @@ class TranslateServiceTestCase: XCTestCase {
 
     func testGetTranslateShouldPostFailedCallbackIfIncorrectData() {
         // Given
-        let translateService = TranslateService(
-            translateSession: URLSessionFake(
-                data: FakeResponseData.incorrectData,
-                response: FakeResponseData.reponseOK,
-                error: nil))
-
+        let session = FakeURLSession(data: FakeResponseData.correctTranslateData, response: FakeResponseData.responseKO, error: nil)
+        let translateService = TranslateService(translateSession: session)
         // When
         let expectation = XCTestExpectation(description: "Waiting for queue change")
         translateService.getTranslation { (success, stringToDecode) in
@@ -86,12 +76,8 @@ class TranslateServiceTestCase: XCTestCase {
 
     func testGetTranslateShouldPostSuccessCallbackIfCorrectDataAndNoError() {
         // Given
-        let translateService = TranslateService(
-            translateSession: URLSessionFake(
-                data: FakeResponseData.translateCorrectData,
-                response: FakeResponseData.reponseOK,
-                error: nil))
-
+        let session = FakeURLSession(data: FakeResponseData.correctTranslateData, response: FakeResponseData.responseKO, error: nil)
+        let translateService = TranslateService(translateSession: session)
         // When
         let expectation = XCTestExpectation(description: "Waiting for queue change")
         translateService.getTranslation { (success, stringToDecode) in
