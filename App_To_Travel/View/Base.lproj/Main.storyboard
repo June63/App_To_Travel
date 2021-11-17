@@ -793,7 +793,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <searchBar contentMode="redraw" ambiguous="YES" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1e-pf-6iE">
-                                        <rect key="frame" x="0.0" y="110" width="375" height="51"/>
+                                        <rect key="frame" x="0.0" y="110" width="375" height="56"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>

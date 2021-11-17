@@ -51,7 +51,10 @@ class CurrenciesListViewController: UIViewController {
                 if success {
                     self.fillCurrencies()
                 } else {
-                    self.alertListFail()
+                    DispatchQueue.main.async {
+                        self.alertListFail()
+                    }
+                   
                 }
             }
             return
@@ -86,7 +89,9 @@ class CurrenciesListViewController: UIViewController {
         // Sorted array
         self.currencies = unsortedCurrencies.sorted(by: <)
         // Reload data
+        DispatchQueue.main.async {
         self.currenciesTableView.reloadData()
+        }
     }
 }
 
@@ -113,9 +118,8 @@ extension CurrenciesListViewController: UITableViewDelegate, UITableViewDataSour
         // Save currency
         SettingService.currency = selectedCurrency
         // Pass the currency back to the CurrencyVC
+        dismiss(animated: true)
         delegate?.passCurrency(selectedCurrency)
-
-        self.dismiss(animated: true)
     }
 }
 

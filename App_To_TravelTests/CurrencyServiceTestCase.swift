@@ -5,15 +5,15 @@
 //  Created by Léa Kieffer on 10/11/2021.
 //
 
-@testable import App_To_Travel
 import XCTest
+@testable import App_To_Travel
 
 class CurrencyServiceTestCase: XCTestCase {
 
     func testGetCurrencyShouldPostFailedCallbackIfError() {
         // Given
         let currencyService = CurrencyService(
-            currencySession: URLSessionFake(data: nil, response: nil, error: FakeResponseData.error))
+            currencySession: MockURLProtocol
         // When
         let expectation = XCTestExpectation(description: "Wait for queue change")
         currencyService.getCurrency { (success) in

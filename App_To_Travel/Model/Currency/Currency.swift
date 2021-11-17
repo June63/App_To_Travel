@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 // Struct for matching Json response
 class Currency: Codable {

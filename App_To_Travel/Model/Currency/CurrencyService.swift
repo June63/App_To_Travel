@@ -79,11 +79,9 @@ class CurrencyService {
                 Currency.shared.date = responseJSON.date
                 Currency.shared.rates = responseJSON.rates
                 callback(true)
-        
         }
 
         // Resumes the task
         task?.resume()
     }
 }
-
