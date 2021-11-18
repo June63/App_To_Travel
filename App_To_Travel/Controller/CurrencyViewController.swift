@@ -22,7 +22,7 @@ class CurrencyViewController: UIViewController {
     @IBOutlet weak var currencyButton: UIStackView!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var amountTextField: UITextField!
-    @IBOutlet weak var converterButton: UIButton!
+    @IBOutlet weak var converterButton: DesignableButton!
     @IBOutlet weak var loader: UIActivityIndicatorView!
 
     // MARK: Action
@@ -68,18 +68,11 @@ class CurrencyViewController: UIViewController {
     private func getCurrency() {
         // Checking the date
         guard checkForSameDate() else {
-            // Hiding the button and show the loader
-            converterButton.isHidden = true
-            loader.isHidden = false
 
             // If not the same date, get the currency from API
             CurrencyService.shared.getCurrency { (success) in
-                // Showing the button and hide the loader
-                self.converterButton.isHidden = false
-                self.loader.isHidden = true
-
+                
                 if success {
-                    //
                     DispatchQueue.main.async {
                         self.convertingCurrency()
                     }
@@ -223,6 +216,7 @@ extension CurrencyViewController: UITextFieldDelegate {
         UIView.animate(withDuration: 0.3) {
             self.scrollView.contentOffset = CGPoint(x: 0, y: 0)
             self.headerView.alpha = 1
+            self.converterButton.transform = .identity
             self.loader.transform = .identity
         }
 

@@ -13,8 +13,9 @@ class WeatherServiceTestCase: XCTestCase {
 
     func testGetWeatherShouldPostFailedCallbackIfError() {
         // Given
-        let session = FakeURLSession(data: FakeResponseData.correctWeatherData, response: FakeResponseData.responseKO, error: nil)
-        let weatherService = WeatherService(weatherSession: session, weatherNYSession: session)
+        let session = FakeURLSession(data: FakeResponseData.correctWeatherData,response: FakeResponseData.responseKO, error: nil)
+        let sessionNY = FakeURLSession(data: FakeResponseData.correctWeatherNYData,response: FakeResponseData.responseKO, error: nil)
+        let weatherService = WeatherService(weatherSession: session, weatherNYSession: sessionNY)
         // When
         let expectation = XCTestExpectation(description: "Waiting for queue change")
         weatherService.getWeather { (success, weatherDetails) in
@@ -29,8 +30,9 @@ class WeatherServiceTestCase: XCTestCase {
 
     func testGetWeatherShouldPostFailedCallbackIfNoData() {
         // Given
-        let session = FakeURLSession(data: FakeResponseData.correctWeatherData, response: FakeResponseData.responseKO, error: nil)
-        let weatherService = WeatherService(weatherSession: session, weatherNYSession: session)
+        let session = FakeURLSession(data: FakeResponseData.correctWeatherData,response: FakeResponseData.responseKO, error: nil)
+        let sessionNY = FakeURLSession(data: FakeResponseData.correctWeatherNYData,response: FakeResponseData.responseKO, error: nil)
+        let weatherService = WeatherService(weatherSession: session, weatherNYSession: sessionNY)
         // When
         let expectation = XCTestExpectation(description: "Waiting for queue change")
         weatherService.getWeather { (success, weatherDetails) in
@@ -45,8 +47,9 @@ class WeatherServiceTestCase: XCTestCase {
 
     func testGetWeatherShouldPostFailedCallbackIfIncorrectResponse() {
         // Given
-        let session = FakeURLSession(data: FakeResponseData.correctWeatherData, response: FakeResponseData.responseKO, error: nil)
-        let weatherService = WeatherService(weatherSession: session, weatherNYSession: session)
+        let session = FakeURLSession(data: FakeResponseData.correctWeatherData,response: FakeResponseData.responseKO, error: nil)
+        let sessionNY = FakeURLSession(data: FakeResponseData.correctWeatherNYData,response: FakeResponseData.responseKO, error: nil)
+        let weatherService = WeatherService(weatherSession: session, weatherNYSession: sessionNY)
         // When
         let expectation = XCTestExpectation(description: "Waiting for queue change")
         weatherService.getWeather { (success, weatherDetails) in
@@ -61,8 +64,9 @@ class WeatherServiceTestCase: XCTestCase {
 
     func testGetWeatherShouldPostFailedCallbackIfIncorrectData() {
         // Given
-        let session = FakeURLSession(data: FakeResponseData.correctWeatherData, response: FakeResponseData.responseKO, error: nil)
-        let weatherService = WeatherService(weatherSession: session, weatherNYSession: session)
+        let session = FakeURLSession(data: FakeResponseData.correctWeatherData,response: FakeResponseData.responseKO, error: nil)
+        let sessionNY = FakeURLSession(data: FakeResponseData.correctWeatherNYData,response: FakeResponseData.responseKO, error: nil)
+        let weatherService = WeatherService(weatherSession: session, weatherNYSession: sessionNY)
         // When
         let expectation = XCTestExpectation(description: "Waiting for queue change")
         weatherService.getWeather { (success, weatherDetails) in
@@ -77,8 +81,9 @@ class WeatherServiceTestCase: XCTestCase {
 
     func testGetWeatherShouldPostFailedCallbackIfNYWeatherError() {
         // Given
-        let session = FakeURLSession(data: FakeResponseData.correctWeatherData, response: FakeResponseData.responseKO, error: nil)
-        let weatherService = WeatherService(weatherSession: session, weatherNYSession: session)
+        let session = FakeURLSession(data: FakeResponseData.correctWeatherData,response: FakeResponseData.responseKO, error: nil)
+        let sessionNY = FakeURLSession(data: FakeResponseData.correctWeatherNYData,response: FakeResponseData.responseKO, error: nil)
+        let weatherService = WeatherService(weatherSession: session, weatherNYSession: sessionNY)
         // When
         let expectation = XCTestExpectation(description: "Waiting for queue change")
         weatherService.getWeather { (success, weatherDetails) in
@@ -93,8 +98,9 @@ class WeatherServiceTestCase: XCTestCase {
 
     func testGetWeatherShouldPostFailedCallbackIfNoNYWeatherData() {
         // Given
-        let session = FakeURLSession(data: FakeResponseData.correctWeatherData, response: FakeResponseData.responseKO, error: nil)
-        let weatherService = WeatherService(weatherSession: session, weatherNYSession: session)
+        let session = FakeURLSession(data: FakeResponseData.correctWeatherData,response: FakeResponseData.responseKO, error: nil)
+        let sessionNY = FakeURLSession(data: FakeResponseData.correctWeatherNYData,response: FakeResponseData.responseKO, error: nil)
+        let weatherService = WeatherService(weatherSession: session, weatherNYSession: sessionNY)
         // When
         let expectation = XCTestExpectation(description: "Waiting for queue change")
         weatherService.getWeather { (success, weatherDetails) in
@@ -109,8 +115,9 @@ class WeatherServiceTestCase: XCTestCase {
 
     func testGetWeatherShouldPostFailedCallbackIfIncorrectNYWeatherData() {
         // Given
-        let session = FakeURLSession(data: FakeResponseData.correctWeatherData, response: FakeResponseData.responseKO, error: nil)
-        let weatherService = WeatherService(weatherSession: session, weatherNYSession: session)
+        let session = FakeURLSession(data: FakeResponseData.correctWeatherData,response: FakeResponseData.responseKO, error: nil)
+        let sessionNY = FakeURLSession(data: FakeResponseData.correctWeatherNYData,response: FakeResponseData.responseKO, error: nil)
+        let weatherService = WeatherService(weatherSession: session, weatherNYSession: sessionNY)
         // When
         let expectation = XCTestExpectation(description: "Waiting for queue change")
         weatherService.getWeather { (success, weatherDetails) in
@@ -125,8 +132,9 @@ class WeatherServiceTestCase: XCTestCase {
 
     func testGetWeatherShouldPostFailedCallbackIfNYWeatherIncorrectResponse() {
         // Given
-        let session = FakeURLSession(data: FakeResponseData.correctWeatherData, response: FakeResponseData.responseKO, error: nil)
-        let weatherService = WeatherService(weatherSession: session, weatherNYSession: session)
+        let session = FakeURLSession(data: FakeResponseData.correctWeatherData,response: FakeResponseData.responseKO, error: nil)
+        let sessionNY = FakeURLSession(data: FakeResponseData.correctWeatherNYData,response: FakeResponseData.responseKO, error: nil)
+        let weatherService = WeatherService(weatherSession: session, weatherNYSession: sessionNY)
         // When
         let expectation = XCTestExpectation(description: "Waiting for queue change")
         weatherService.getWeather { (success, weatherDetails) in
@@ -141,8 +149,9 @@ class WeatherServiceTestCase: XCTestCase {
 
     func testGetWeatherShouldPostSuccessCallbackIfWeatherAndNYWeatherAreOK() {
         // Given
-        let session = FakeURLSession(data: FakeResponseData.correctWeatherData, response: FakeResponseData.responseKO, error: nil)
-        let weatherService = WeatherService(weatherSession: session, weatherNYSession: session)
+        let session = FakeURLSession(data: FakeResponseData.correctWeatherData,response: FakeResponseData.responseKO, error: nil)
+        let sessionNY = FakeURLSession(data: FakeResponseData.correctWeatherNYData,response: FakeResponseData.responseKO, error: nil)
+        let weatherService = WeatherService(weatherSession: session, weatherNYSession: sessionNY)
         // When
         let expectation = XCTestExpectation(description: "Waiting for queue change")
         weatherService.getWeather { (success, weatherDetails) in

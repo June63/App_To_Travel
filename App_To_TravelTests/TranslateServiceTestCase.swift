@@ -85,7 +85,7 @@ class TranslateServiceTestCase: XCTestCase {
             XCTAssertTrue(success)
             XCTAssertNotNil(stringToDecode)
 
-            let string = "I&#39;m testing a translation"
+            let string = ""
             XCTAssertEqual(string, stringToDecode)
             expectation.fulfill()
         }

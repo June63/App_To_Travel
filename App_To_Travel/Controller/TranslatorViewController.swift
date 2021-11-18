@@ -17,7 +17,7 @@ class TranslatorViewController: UIViewController {
     // MARK: Outlets
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var headerView: UIView!
-    @IBOutlet weak var translatorButton: UIButton!
+    @IBOutlet weak var translatorButton: DesignableButton!
     @IBOutlet weak var topView: UIStackView!
     @IBOutlet weak var targetTextView: UITextView!
     @IBOutlet weak var separatorView: UIImageView!
@@ -48,10 +48,7 @@ class TranslatorViewController: UIViewController {
 
     /// Get translation from API
     private func getTranslation() {
-        // Hide button and show loader
-        loader.isHidden = false
-        translatorButton.isHidden = true
-
+     
         // API call
         TranslateService.shared.getTranslation { (success, stringToDecode) in
 
@@ -59,12 +56,11 @@ class TranslatorViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.targetTextView.text = self.decodeString(stringToDecode!)
                 }
-                            
             } else {
                 DispatchQueue.main.async {
                     self.alertTranslationFail()
                 }
-                            
+                
             }
         }
     }
