@@ -54,7 +54,7 @@ class TranslatorViewController: UIViewController {
 
             if success {
                 DispatchQueue.main.async {
-                    self.targetTextView.text = self.decodeString(stringToDecode!)
+                    self.targetTextView.text = self.decodeString(stringToDecode)
                 }
             } else {
                 DispatchQueue.main.async {

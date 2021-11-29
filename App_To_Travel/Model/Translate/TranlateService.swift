@@ -43,7 +43,7 @@ class TranslateService {
     ///
     /// - Parameter callback: Determine if the translate object is create or not and passing a string
     /// - Remark: This function is executed in the Main Queue
-    func getTranslation(callback: @escaping (Bool, String?) -> Void) {
+    func getTranslation(callback: @escaping (Bool, String) -> Void) {
 
         // Set request
         let request = getURLRequest()
@@ -56,7 +56,7 @@ class TranslateService {
           
                 // Check for data and no error
                 guard let data = data, error == nil else {
-                    callback(false, nil)
+                    callback(false, "")
                     // Print the error
                     if let error = error {
                         print(error.localizedDescription)
@@ -66,14 +66,14 @@ class TranslateService {
 
                 // Check for response
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                    callback(false, nil)
+                    callback(false, "")
                     print("No response from translateSession")
                     return
                 }
 
                 // Check for json decoder
                 guard let responseJSON = try? JSONDecoder().decode(TranslateModel.self, from: data) else {
-                    callback(false, nil)
+                    callback(false, "")
                     print("Failed to decode translateJSON")
                     return
                 }

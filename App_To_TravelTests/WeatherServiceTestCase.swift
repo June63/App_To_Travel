@@ -149,8 +149,8 @@ class WeatherServiceTestCase: XCTestCase {
 
     func testGetWeatherShouldPostSuccessCallbackIfWeatherAndNYWeatherAreOK() {
         // Given
-        let session = FakeURLSession(data: FakeResponseData.correctWeatherData,response: FakeResponseData.responseKO, error: nil)
-        let sessionNY = FakeURLSession(data: FakeResponseData.correctWeatherNYData,response: FakeResponseData.responseKO, error: nil)
+        let session = FakeURLSession(data: FakeResponseData.correctWeatherData,response: FakeResponseData.responseOK, error: nil)
+        let sessionNY = FakeURLSession(data: FakeResponseData.correctWeatherNYData,response: FakeResponseData.responseOK, error: nil)
         let weatherService = WeatherService(weatherSession: session, weatherNYSession: sessionNY)
         // When
         let expectation = XCTestExpectation(description: "Waiting for queue change")

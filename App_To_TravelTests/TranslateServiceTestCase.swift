@@ -19,7 +19,7 @@ class TranslateServiceTestCase: XCTestCase {
         translateService.getTranslation { (succes, stringToDecode) in
             // Then
             XCTAssertFalse(succes)
-            XCTAssertNil(stringToDecode)
+            XCTAssertEqual("", stringToDecode)
             expectation.fulfill()
         }
 
@@ -35,7 +35,7 @@ class TranslateServiceTestCase: XCTestCase {
         translateService.getTranslation { (success, stringToDecode) in
             // Then
             XCTAssertFalse(success)
-            XCTAssertNil(stringToDecode)
+            XCTAssertEqual("", stringToDecode)
             expectation.fulfill()
         }
 
@@ -51,7 +51,7 @@ class TranslateServiceTestCase: XCTestCase {
         translateService.getTranslation { (success, stringToDecode) in
             // Then
             XCTAssertFalse(success)
-            XCTAssertNil(stringToDecode)
+            XCTAssertEqual("", stringToDecode)
             expectation.fulfill()
         }
 
@@ -67,7 +67,7 @@ class TranslateServiceTestCase: XCTestCase {
         translateService.getTranslation { (success, stringToDecode) in
             // Then
             XCTAssertFalse(success)
-            XCTAssertNil(stringToDecode)
+            XCTAssertEqual("", stringToDecode)
             expectation.fulfill()
         }
 
@@ -76,7 +76,7 @@ class TranslateServiceTestCase: XCTestCase {
 
     func testGetTranslateShouldPostSuccessCallbackIfCorrectDataAndNoError() {
         // Given
-        let session = FakeURLSession(data: FakeResponseData.correctTranslateData, response: FakeResponseData.responseKO, error: nil)
+        let session = FakeURLSession(data: FakeResponseData.correctTranslateData, response: FakeResponseData.responseOK, error: nil)
         let translateService = TranslateService(translateSession: session)
         // When
         let expectation = XCTestExpectation(description: "Waiting for queue change")
@@ -85,7 +85,7 @@ class TranslateServiceTestCase: XCTestCase {
             XCTAssertTrue(success)
             XCTAssertNotNil(stringToDecode)
 
-            let string = ""
+            let string = "I&#39;m testing a translation"
             XCTAssertEqual(string, stringToDecode)
             expectation.fulfill()
         }

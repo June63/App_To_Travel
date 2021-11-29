@@ -57,7 +57,7 @@ class CurrencyServiceTestCase: XCTestCase {
 
     func testGetCurrencyShouldPostSuccesCallbackIfCorrectDataAndNoError() {
         // Given
-        let session = FakeURLSession(data: FakeResponseData.correctCurrencyData, response: FakeResponseData.responseKO, error: nil)
+        let session = FakeURLSession(data: FakeResponseData.correctCurrencyData, response: FakeResponseData.responseOK, error: nil)
         let currencyService = CurrencyService(currencySession: session)
         // When
         let expectation = XCTestExpectation(description: "Wait for queue change")
